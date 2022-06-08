@@ -1,0 +1,25 @@
+.container {
+    /* outline: 1px solid red; */
+    width: 1200px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.section {
+    padding-bottom: 94px;
+    padding-top: 94px;
+}
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+
+    letter-spacing: 0.03em;
+    color: var(--secondary-txt-cl);
+
+    text-align: center;
+    margin-bottom: 50px;
+}
