@@ -499,12 +499,20 @@ p {
 }
 
 .mobile-menu {
+  display: none;
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 40px;
+  padding: 48px 83px 48px 40px;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.mobile-menu.is-open {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -512,9 +520,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
-  background-color: #fff;
+  z-index: 10;
 }
 
 @media screen and (min-width: 768px) {
@@ -523,8 +529,66 @@ p {
   }
 }
 
-.mobile-menu__contatcts {
+.mobile-menu__item {
+  color: #212121;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: setLineHeight(47, 40px);
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-menu__item:focus {
+  color: #2196f3;
+}
+
+.mobile-menu__tel {
+  color: #2196f3;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: setLineHeight(40, 34px);
+  letter-spacing: 0.02em;
+  margin-bottom: 32px;
+}
+
+.mobile-menu__mail {
+  color: #757575;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: setLineHeight(28, 24px);
+  letter-spacing: 0.02em;
+  margin-bottom: 64px;
+}
+
+.mobile-menu__contacts {
   margin-top: auto;
+}
+
+.mobile-menu__socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.mobile-menu__sosial {
+  display: inline-block;
+  color: #2196f3;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: setLineHeight(22, 18px);
+  letter-spacing: 0.02em;
+}
+
+.mobile-menu__sosial:not(:last-child) {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.mobile-menu__sosial:not(:first-child) {
+  margin-left: 10px;
 }
 
 .header {
@@ -542,6 +606,18 @@ p {
   height: 60px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1279.98px) {
+  .header__logo {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header__logo {
+    margin-right: 93px;
+  }
+}
+
 .navigation__button {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -553,7 +629,7 @@ p {
   position: absolute;
   top: 10px;
   right: 15px;
-  z-index: 2;
+  z-index: 100;
 }
 
 @media screen and (min-width: 768px) {
@@ -574,108 +650,16 @@ p {
   display: none;
 }
 
-.navigation__menu-container {
-  background-color: yellowgreen;
-  padding-top: 48px;
-  padding-right: 83px;
-  padding-bottom: 48px;
-  padding-left: 40px;
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.navigation__menu-container.is-open {
-  display: block;
-}
-
-.navigation__link {
-  display: inline-block;
-  -webkit-transition: var(--animation);
-  transition: var(--animation);
-}
-
-.navigation__link:hover, .navigation__link:focus {
-  color: var(--accent-cl);
-}
-
-.navigation__item {
-  font-family: inherit;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: var(--secondary-txt-cl);
+@media screen and (min-width: 480px) {
+  .desktop-menu {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
-  .navigation__item {
-    font-size: 14px;
-    line-height: 1.14;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .desktop-menu {
+    display: block;
   }
-  .navigation__item:not(:last-child) {
-    margin-right: 50px;
-  }
-}
-
-.mail-group,
-.phone-group {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.17;
-  letter-spacing: 0.02em;
-  color: var(--main-txt-cl);
-}
-
-.phone__link,
-.mail__link {
-  color: var(--main-txt-cl);
-  -webkit-transition: var(--animation);
-  transition: var(--animation);
-}
-
-.mail__link {
-  margin-right: 30px;
-}
-
-.mail__link:hover, .mail__link:focus {
-  color: var(--accent-cl);
-  outline: none;
-}
-
-.phone__link:hover,
-.phone__link:focus {
-  color: var(--accent-cl);
-  outline: none;
-}
-
-.mail__icon {
-  margin-right: 10px;
-  fill: var(--main-txt-cl);
-  -webkit-transition: var(--animation);
-  transition: var(--animation);
-}
-
-.mail__link:hover + .mail__icon,
-.mail__link:focus + .mail__icon {
-  fill: var(--accent-cl);
-}
-
-.phone__icon {
-  margin-right: 10px;
-  fill: var(--main-txt-cl);
-  -webkit-transition: var(--animation);
-  transition: var(--animation);
-}
-
-.phone__link:hover + .phone__icon,
-.phone__link:focus + .phone__icon {
-  fill: var(--accent-cl);
 }
 
 .hero {
