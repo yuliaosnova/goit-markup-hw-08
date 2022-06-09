@@ -6,6 +6,11 @@
     top: 0;
     left: 0;
     transition: opacity var(--animation), visibility var(--modal-animation);
+
+    padding: 93px 15px 94px 15px;
+    overflow-y: scroll;
+    
+    position: relative;
 }
 
 .backdrop.is-hidden {
@@ -16,35 +21,41 @@
 
 .modal-wrapper {
     background-color: #ffffff;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-        0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    width: 528px;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
 
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-left: 41px;
-    padding-right: 39px;
+    // position: absolute;
+    // top: 100%;
+    // left: 0;
+    // width: 100%;
 
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transition: transform var(--modal-animation),
-        opacity 250ms ease-in-out 200ms;
+    @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        // transition: transform var(--modal-animation),
+        //     opacity 250ms ease-in-out 200ms;
+     }
+    
+    
 }
 
-/* початковий стан елемента перед анімацією */
-.backdrop.is-hidden .modal-wrapper {
-    transform: rotate(0) translate(-50%, -50%);
-    opacity: 0;
-}
+// /* початковий стан елемента перед анімацією */
+// .backdrop.is-hidden .modal-wrapper {
+//     transform: rotate(0) translate(-50%, -50%);
+//     opacity: 0;
+// }
 
-/* кінцевий стан елемента після анімації */
-.backdrop .modal-wrapper {
-    transform: rotate(360deg) translate(-50%, -50%);
-    opacity: 1;
-}
+// /* кінцевий стан елемента після анімації */
+// .backdrop .modal-wrapper {
+//     transform: rotate(360deg) translate(-50%, -50%);
+//     opacity: 1;
+// }
 
 .close-btn {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -121,7 +132,7 @@
 }
 
 .modal-form__input {
-    width: 448px;
+    max-width: 448px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -143,7 +154,7 @@
 }
 
 .modal-form__message {
-    width: 448px;
+    max-width: 448px;
     height: 120px;
     resize: none;
     padding-left: 16px;

@@ -26,17 +26,22 @@
         <a class="logo header__logo" href="./index.html">
           Web<span class="logo-text">Studio</span>
         </a>
-        <nav class="navigation">
+      <button type="button" class="navigation__button" is-open aria-expanded="false" aria-controls="menu-container"
+        data-menu-button>
+        <svg class="" width="40" height="40" aria-label="Переключатель мобильного меню">
+          <use class="button__icon--menu" href="./images/sprite.svg#icon-menu_40px"></use>
+          <use class="button__icon--cross" href="./images/sprite.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+
+
+        <!-- <nav class="navigation">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a class="link navigation__link navigation__link--current" href="./index.html"
-                >Студия</a
-              >
+              <a class="link navigation__link navigation__link--current" href="./index.html">Студия</a>
             </li>
             <li class="navigation__item">
-              <a class="link navigation__link" href="./portfolio.html"
-                >Портфолио</a
-              >
+              <a class="link navigation__link" href="./portfolio.html">Портфолио</a>
             </li>
             <li class="navigation__item">
               <a class="link navigation__link" href="">Контакты</a>
@@ -45,9 +50,7 @@
         </nav>
         <div class="contacts-container">
           <div class="mail-group">
-            <a class="mail__link link" href="mailto:info@devstudio.com"
-              >info@devstudio.com</a
-            >
+            <a class="mail__link link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             <svg class="mail__icon" width="16px" height="12px">
               <use href="./images/sprite.svg#icon-envelope"></use>
             </svg>
@@ -59,6 +62,46 @@
             </svg>
           </div>
         </div>
+        </div> -->
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="menu-container" data-menu>
+          <ul class="mobile-menu__nav">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link">Студия </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Контакты</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contatcts">
+            <li class="mobile-menu__item">
+              <a href="tel:+380961111111" class="mobile-menu__link">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="mailto:info@devstudio.com" class="mobile-menu__link">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Instagram </a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Twitter</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">Facebook</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="" class="mobile-menu__link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
+        
+        
       </div>
     </header>
     <main>
@@ -649,7 +692,7 @@
         
       </div>
     </footer>
-
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
