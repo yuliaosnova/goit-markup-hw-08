@@ -1,10 +1,15 @@
 .business {
+
+    @include mq (not-desktop) {
+            display: none;
+        }
+
     padding-top: 0;
 }
 
-// .business__list {
-//     display: flex;
-// }
+.business__list {
+    display: flex;
+}
 
 .business__item {
     margin-right: 30px;

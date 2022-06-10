@@ -8,10 +8,6 @@
     align-items: center;
     // justify-content: space-between;
     position: relative;
-
-    height: 60px;
-
-    
 }
 
 .header__logo {
@@ -23,7 +19,6 @@
     @include mq (desktop) {
         margin-right: 93px;
     }
-
 }
 
 .navigation__button {
@@ -39,7 +34,6 @@
     right: 15px;  
     z-index: 100;
 
-    
 
     @media screen and (min-width: 768px) {
         display: none;
@@ -56,7 +50,6 @@
 
 .button__icon--cross {
     display: none;
-
 }
 
 .desktop-menu {
@@ -65,143 +58,176 @@
         }
 
     @include mq (tablet) {
-        display: block;
+        // display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         }
-
 }
 
 
+.navigation__list {
+     display: flex;   
+}
 
+.navigation__link--current {
+    color: var(--accent-cl);
+    position: relative;
 
-// .navigation__list {
-//     display: flex;
-// }
-
-// .navigation__link--current {
-//     color: var(--accent-cl);
-//     position: relative;
-
-//     &::after {
-//         content: "";
-//         display: block;
-//         width: 100%;
-//         height: 4px;
-//         background-color: rgba(33, 150, 243, 1);
-//         border-radius: 2px;
+    &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: rgba(33, 150, 243, 1);
+        border-radius: 2px;
     
-//         position: absolute;
-//         bottom: 0;
-//         left: 0;
-//         }
-// }
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        }
+}
 
-// .navigation__link {
-//     display: inline-block;
+.navigation__link {
+    display: inline-block;
 
-    // font-family: inherit;
-    // font-weight: 500;
-    // font-size: 40px;
-    // line-height: 1.17;
-    // letter-spacing: 0.02em;
-    // color: var(--secondary-txt-cl);
+    @include fonts (500, 14px, 16, 0.02em);
 
-    // padding-top: 32px;
-    // padding-bottom: 28px;
-//     transition: var(--animation);
+    color: var(--secondary-txt-cl);
 
-//     &:hover,
-//     &:focus {
-//         color: var(--accent-cl);
-//     }
-// }
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: var(--animation);
 
-// .navigation__item {
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+    } 
+}
 
-//     font-family: inherit;
-//     font-weight: 500;
-//     font-size: 40px;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-//     color: var(--secondary-txt-cl);
+.navigation__item {
 
-//     @media screen and (max-width: 479px){
-        
-//     }
+    &:not(:last-child) {
+            margin-right: 50px;
+        }
+    
+    
 
-//     @media screen and (min-width: 768px) {
-//         font-size: 14px;
-//         line-height: 1.14;
+    // @include mq (tablet-only) {
+    // &:last-child {
+    //         margin-right: 84px;
+    //     }
+    // }
 
+    // @include mq (desktop){
+    //     &:last-child {
+    //             margin-right: 305px;
+    //         }
+    // }
+}
 
-//         display: flex; 
-//         &:not(:last-child) {
-//                 margin-right: 50px;
-//             }
-//     }
-// }
+.contacts-container {
+   
+    display: flex;
+    
+    justify-content: center;
+    align-items: flex-start;
+    @include mq (tablet) {
+    flex-direction: column;
+        }
 
-// .contacts-container {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     margin-left: auto;
-// }
+    @include mq (tablet) {
+        flex-direction: column;
+        margin-left: 84px;
+    }
 
-// .mail-group,
-// .phone-group {
-    // display: flex;
-    // flex-direction: row-reverse;
-    // align-items: center;
+    @include mq (desktop) {
+        flex-direction: row;
+        margin-left: 305px;
+    }
+}
 
-    // font-weight: 500;
-    // font-size: 40px;
-    // font-size: 14px;
-    // line-height: 1.14;
-//     line-height: 1.17;
-//     letter-spacing: 0.02em;
-//     color: var(--main-txt-cl);
-// }
+.mail-group,
+.phone-group {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+   
 
-// .phone__link,
-// .mail__link {
-//     color: var(--main-txt-cl);
-//     transition: var(--animation);
-// }
+    color: var(--main-txt-cl);
 
-// .mail__link {
-//     margin-right: 30px;
+    @include mq(tablet) {
+    @include fonts (500, 12px, 14, 0.02em);
+        }
 
-//     &:hover,
-//     &:focus {
-//         color: var(--accent-cl);
-//         outline: none;
-//     }
-// }
+    @include mq(desktop) {
+    @include fonts (500, 14px, 16, 0.02em);
+          }
+}
 
-// .phone__link:hover,
-// .phone__link:focus {
-//     color: var(--accent-cl);
-//     outline: none;
-// }
+.phone__link,
+.mail__link {
+    color: var(--main-txt-cl);
+    transition: var(--animation);
+}
 
-// .mail__icon {
-//     margin-right: 10px;
-//     fill: var(--main-txt-cl);
-//     transition: var(--animation);
+.mail__link {
+    @include mq (tablet) {
+            margin-bottom: 10px;
+        }
 
-//     .mail__link:hover+&,
-//     .mail__link:focus+&{
-//         fill: var(--accent-cl);
-//     }
-// }
+    @include mq (desktop) {
+            margin-right: 30px;
+        }
 
-// .phone__icon {
-//     margin-right: 10px;
-//     fill: var(--main-txt-cl);
-//     transition: var(--animation);
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+        outline: none;
+    }
+}
 
-//     .phone__link:hover+&,
-//     .phone__link:focus+& {
-//         fill: var(--accent-cl);
-//     }
-// }
+.phone__link:hover,
+.phone__link:focus {
+    color: var(--accent-cl);
+    outline: none;
+}
+
+.mail__icon {
+    @include mq (tablet) {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+   
+    fill: var(--main-txt-cl);
+    transition: var(--animation);
+
+    @include mq(tablet-only) {
+            width: 14px;
+            height: 10px;
+        }
+
+    .mail__link:hover+&,
+    .mail__link:focus+&{
+        fill: var(--accent-cl);
+    }
+}
+
+.phone__icon {
+    @include mq (tablet) {
+            margin-right: 10px;
+        }
+
+    fill: var(--main-txt-cl);
+    transition: var(--animation);
+
+    @include mq(tablet-only) {
+            width: 10px;
+            height: 14px;
+        }
+
+    .phone__link:hover+&,
+    .phone__link:focus+& {
+        fill: var(--accent-cl);
+    }
+}
