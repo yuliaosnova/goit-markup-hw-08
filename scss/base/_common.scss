@@ -7,13 +7,18 @@ body {
 }
 
 .section-title {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
-
-    letter-spacing: 0.03em;
     color: var(--secondary-txt-cl);
-
     text-align: center;
+
     margin-bottom: 50px;
+
+    @include mq(mobile) {
+            @include fonts (700, 28px, 33, 0.03em);
+            margin-bottom: 30px;
+        }
+
+    @include mq(desktop) {
+        @include fonts (700, 36px, 42, 0.03em);
+        margin-bottom: 50px;
+    }
 }
