@@ -10,8 +10,6 @@ body {
     color: var(--secondary-txt-cl);
     text-align: center;
 
-    margin-bottom: 50px;
-
     @include mq(mobile) {
             @include fonts (700, 28px, 33, 0.03em);
             margin-bottom: 30px;
