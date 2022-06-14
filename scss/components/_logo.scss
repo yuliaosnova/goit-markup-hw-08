@@ -4,7 +4,7 @@
     text-decoration: none;
     display: inline-block;
 
-    @include mq(mobile) {
+    @include mq(mobile-only) {
             @include fonts (700, 24px, 28, 0.03em);
             padding-top: 16px;
             padding-bottom: 16px;

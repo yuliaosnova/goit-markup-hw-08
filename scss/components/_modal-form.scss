@@ -5,12 +5,21 @@
     position: fixed;
     top: 0;
     left: 0;
-    transition: opacity var(--animation), visibility var(--modal-animation);
-
-    padding: 93px 15px 94px 15px;
+    transition: opacity var(--animation), 
+    visibility var(--modal-animation);
     overflow-y: scroll;
+
+    @include mq (mobile-only) {
+       padding: 93px 15px;
+    }
     
-    position: relative;
+    @include mq (tablet-only) {
+        
+    }
+    
+    @include mq (desktop) {
+        
+    }
 }
 
 .backdrop.is-hidden {
@@ -25,37 +34,41 @@
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    width: 100%;
-    max-width: 450px;
+    
     padding: 40px;
 
-    // position: absolute;
-    // top: 100%;
-    // left: 0;
-    // width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
 
-    @media screen and (min-width: 768px) {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        // transition: transform var(--modal-animation),
-        //     opacity 250ms ease-in-out 200ms;
-     }
+    @include mq (mobile-only) {
+       
+    }
     
+    @include mq (tablet-only) {
+      
+    }
     
+    @include mq (desktop) {
+        width: 528px;
+    }
+
+    transition: transform var(--modal-animation),
+        opacity 250ms ease-in-out 200ms;
 }
 
-// /* початковий стан елемента перед анімацією */
-// .backdrop.is-hidden .modal-wrapper {
-//     transform: rotate(0) translate(-50%, -50%);
-//     opacity: 0;
-// }
+/* початковий стан елемента перед анімацією */
+.backdrop.is-hidden .modal-wrapper {
+    transform: rotate(0) translate(-50%, -50%);
+    opacity: 0;
+}
 
-// /* кінцевий стан елемента після анімації */
-// .backdrop .modal-wrapper {
-//     transform: rotate(360deg) translate(-50%, -50%);
-//     opacity: 1;
-// }
+/* кінцевий стан елемента після анімації */
+.backdrop .modal-wrapper {
+    transform: rotate(360deg) translate(-50%, -50%);
+    opacity: 1;
+}
 
 .close-btn {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -81,10 +94,12 @@
     transition: var(--animation);
 
     .close-btn:hover & {
-            fill: var(--accent-cl);}
+        fill: var(--accent-cl);
+    }
 
     .close-btn:focus & {
-            fill: var(--accent-cl);}
+        fill: var(--accent-cl);
+    }
 }
 
 .modal-title {
@@ -103,11 +118,12 @@
 .modal-form {
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .modal-form__policy-group {
     display: flex;
+    align-items: baseline;
 }
 
 .modal-form__group {
@@ -132,7 +148,7 @@
 }
 
 .modal-form__input {
-    max-width: 448px;
+    
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -147,14 +163,26 @@
 
     transition: var(--animation);
 
+    @include mq (mobile-only) {
+        width: 370px;
+    }
+    
+    @include mq (tablet-only) {
+        width: 370px;
+    }
+    
+    @include mq (desktop) {
+        width: 448px;
+    }
+
     &:hover,
-    &:focus{
+    &:focus {
         border-color: #2196f3;
     }
 }
 
 .modal-form__message {
-    max-width: 448px;
+   
     height: 120px;
     resize: none;
     padding-left: 16px;
@@ -171,6 +199,18 @@
     border-radius: 4px;
     outline: transparent;
     transition: var(--animation);
+
+    @include mq (mobile-only) {
+        width: 370px;
+    }
+    
+    @include mq (tablet-only) {
+        width: 370px;
+    }
+    
+    @include mq (desktop) {
+        width: 448px;
+    }
 
     &:hover,
     &:focus {
@@ -212,19 +252,14 @@
     transition: var(--animation);
 
     .modal-form__input:focus+& {
-            fill: #2196f3;
-        }
+        fill: #2196f3;
+    }
 
     .modal-form__input:hover+& {
-            fill: #2196f3;
-        }
+        fill: #2196f3;
+    }
 }
 
-.modal-form__policy-group {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
 .modal-form__custom-checkbox {
     width: 16px;
@@ -235,13 +270,14 @@
     margin-right: 7px;
     transition: background-color 250ms ease;
 
-    .modal-form__checkbox:checked + & {
-            background-color: #2196f3;
-            outline-color: transparent;
-        }
-    .modal-form__checkbox:hover + & {
-            outline-color: #2196f3;
-        }
+    .modal-form__checkbox:checked+& {
+        background-color: #2196f3;
+        outline-color: transparent;
+    }
+
+    .modal-form__checkbox:hover+& {
+        outline-color: #2196f3;
+    }
 }
 
 .modal-form__custom-checkbox:focus {
@@ -257,6 +293,3 @@
     opacity: 1;
     fill: #FFFFFF;
 }
-
-
-
