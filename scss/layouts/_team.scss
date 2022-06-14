@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 
-    @include mq (mobile) {
+    @include mq (mobile-only) {
         flex-direction: column;
         }
 
@@ -51,8 +51,9 @@
 }
 
 .team__image {
-    @include mq (mobile) {
-        width: 100%;
+    width: 100%;
+    @include mq (mobile-only) {
+       
         height: 460px;
     }
 

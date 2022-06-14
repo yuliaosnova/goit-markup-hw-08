@@ -33,11 +33,16 @@
     top: 10px;
     right: 15px;  
     z-index: 20;
+    cursor: pointer;
 
 
-    @media screen and (min-width: 768px) {
-        display: none;
-    }
+    // @media screen and (min-width: 768px) {
+    //     display: none;
+    // }
+
+    @include mq (tablet) {
+            display: none;
+        }
 
     &.is-open .button__icon--cross {
         display: block;
@@ -53,7 +58,7 @@
 }
 
 .desktop-menu {
-    @include mq (mobile) {
+    @include mq (mobile-only) {
         display: none;
         }
 

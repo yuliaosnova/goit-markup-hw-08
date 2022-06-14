@@ -27,7 +27,7 @@
 .flex-box {
     display: flex;
 
-    @include mq (mobile) {
+    @include mq (mobile-only) {
         flex-direction: column;
         
     }
