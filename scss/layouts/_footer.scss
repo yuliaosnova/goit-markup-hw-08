@@ -163,11 +163,14 @@
         margin-bottom: 20px;
     }
     
-    @include mq (tablet-only) {}
+    @include mq (tablet) {
+        
+    }
     
     @include mq (desktop) {
         margin-right: 12px;
-        margin-bottom: 0;}
+        margin-bottom: 0;
+        align-items: flex-start;}
 }
 
 .sign-up__label {
@@ -177,10 +180,7 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #ffffff;
-
-    @include mq (mobile) {
-        margin-bottom: 20px;
-    }
+    margin-bottom: 20px;
 }
 
 .sign-up__input {

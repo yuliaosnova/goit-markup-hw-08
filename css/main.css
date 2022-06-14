@@ -238,17 +238,12 @@ p {
   color: var(--accent-cl);
   text-decoration: none;
   display: inline-block;
-}
-
-@media screen and (max-width: 767.98px) {
-  .logo {
-    font-weight: 700;
-    font-size: 24px;
-    line-height: setLineHeight(28, 24px);
-    letter-spacing: 0.03em;
-    padding-top: 16px;
-    padding-bottom: 16px;
-  }
+  font-weight: 700;
+  font-size: 24px;
+  line-height: setLineHeight(28, 24px);
+  letter-spacing: 0.03em;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 @media screen and (min-width: 1200px) {
@@ -1601,6 +1596,9 @@ p {
   .sign-up__group {
     margin-right: 12px;
     margin-bottom: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -1611,12 +1609,7 @@ p {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
-}
-
-@media screen and (min-width: 480px) {
-  .sign-up__label {
-    margin-bottom: 20px;
-  }
+  margin-bottom: 20px;
 }
 
 .sign-up__input {
