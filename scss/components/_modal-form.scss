@@ -42,8 +42,6 @@
     left: 50%;
     z-index: 1000;
 
-    overflow: auto;
-
     @include mq (mobile-only) {
        
     }

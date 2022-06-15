@@ -44,7 +44,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 767.98px) {
   .section-title {
     font-weight: 700;
     font-size: 28px;
@@ -300,7 +300,6 @@ img {
   top: 50%;
   left: 50%;
   z-index: 1000;
-  overflow: auto;
   -webkit-transition: opacity 250ms ease-in-out 200ms, -webkit-transform var(--modal-animation);
   transition: opacity 250ms ease-in-out 200ms, -webkit-transform var(--modal-animation);
   transition: transform var(--modal-animation), opacity 250ms ease-in-out 200ms;
@@ -724,7 +723,7 @@ img {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .navigation__button {
     display: none;
   }
@@ -1889,24 +1888,21 @@ img {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .project__img {
+@media screen and (max-width: 767.98px) {
+  .project-img {
     width: 100%;
-    height: 294px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .project__img {
+  .project-img {
     width: 354px;
-    height: 294px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .project__img {
-    width: 100%;
-    height: 294px;
+  .project-img {
+    width: 370px;
   }
 }
 
@@ -1945,7 +1941,7 @@ img {
 .project__overlay {
   position: relative;
   width: 100%;
-  height: 294px;
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1982,7 +1978,7 @@ img {
 
 @media screen and (min-width: 768px) {
   .project__description {
-    padding: 49px 24px;
+    padding: 49px 24px 77px 24px;
   }
 }
 
