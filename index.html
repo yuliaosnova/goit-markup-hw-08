@@ -225,30 +225,39 @@
         <div class="container">
           <ul class="business__list list">
             <li class="business__item">
-              <img class="business__img"
-                src="./images/picture1.jpg"
-                alt="руки печатают на клавиатуре"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source srcset="
+                        ./images/business-img/business-1_lg.jpg 1x,
+                        ./images/business-img/business-1_lg@2x.jpg 2x
+                      " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/business-img/business-1_lg.jpg" alt="" width="370" height="294" loading="lazy" />
+              </picture>
               <p class="business__text">Десктопные приложения</p>
             </li>
             <li class="business__item">
-              <img class="business__img"
-                src="./images/picture2.jpg"
-                alt="одна рука держит телефон а другая лежит на ноутбуке"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source srcset="
+                          ./images/business-img/business-2_lg.jpg 1x,
+                          ./images/business-img/business-2_lg@2x.jpg 2x
+                        " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/business-img/business-2_lg.jpg" alt="" width="370" height="294" loading="lazy" />
+              </picture>
               <p class="business__text">Мобильные приложения</p>
             </li>
             <li class="business__item">
-              <img
-                src="./images/picture3.jpg"
-                alt="рука держит планшет"
-                width="370"
-                height="294"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source srcset="
+                            ./images/business-img/business-3_lg.jpg 1x,
+                            ./images/business-img/business-3_lg@2x.jpg 2x
+                          " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/business-img/business-3_lg.jpg" alt="" width="370" height="294" loading="lazy" />
+              </picture>
               <p class="business__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -259,12 +268,25 @@
         <h2 class="section-title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__lnk">
-              <img class="team__image"
-                src="./images/photo1.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source media="(min-width: 1200px)" srcset="
+                                  ./images/team-img/team-1_lg.jpg 1x,
+                                  ./images/team-img/team-1_lg@2x.jpg 2x
+                                " type="image/jpg" />
+                <!-- Набір зображень для планшетних екранів -->
+                <source media="(min-width: 768px)" srcset="
+                                  ./images/team-img/team-1_md.jpg 1x,
+                                  ./images/team-img/team-1_md@2x.jpg 2x
+                                " type="image/jpg" />
+                <!-- Набір зображень для мобільних екранів -->
+                <source media="(max-width: 767px)" srcset="
+                                  ./images/team-img/team-1_sm.jpg 1x,
+                                  ./images/team-img/team-1_sm@2x.jpg 2x
+                                " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/team-img/team-1_sm.jpg" alt="" width="450" height="460" loading="lazy" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__member-name">Игорь Демьяненко</h3>
                 <p class="team__team-position">Product Designer</p>
@@ -325,12 +347,25 @@
               </ul>
             </li>
             <li class="team__lnk">
-              <img class="team__image"
-                src="./images/photo2.jpg"
-                alt="Ольга Репина"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source media="(min-width: 1200px)" srcset="
+                    ./images/team-img/team-2_lg.jpg 1x,
+                    ./images/team-img/team-2_lg@2x.jpg 2x
+                  " type="image/jpg" />
+                <!-- Набір зображень для планшетних екранів -->
+                <source media="(min-width: 768px)" srcset="
+                    ./images/team-img/team-2_md.jpg 1x,
+                    ./images/team-img/team-2_md@2x.jpg 2x
+                  " type="image/jpg" />
+                <!-- Набір зображень для мобільних екранів -->
+                <source media="(max-width: 767px)" srcset="
+                    ./images/team-img/team-2_sm.jpg 1x,
+                    ./images/team-img/team-2_sm@2x.jpg 2x
+                  " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/team-img/team-2_sm.jpg" alt="" width="450" height="460" loading="lazy" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__member-name">Ольга Репина</h3>
                 <p class="team__team-position">Frontend Developer</p>
@@ -391,12 +426,25 @@
               </ul>
             </li>
             <li class="team__lnk">
-              <img class="team__image"
-                src="./images/photo3.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source media="(min-width: 1200px)" srcset="
+                      ./images/team-img/team-3_lg.jpg 1x,
+                      ./images/team-img/team-3_lg@2x.jpg 2x
+                    " type="image/jpg" />
+                <!-- Набір зображень для планшетних екранів -->
+                <source media="(min-width: 768px)" srcset="
+                      ./images/team-img/team-3_md.jpg 1x,
+                      ./images/team-img/team-3_md@2x.jpg 2x
+                    " type="image/jpg" />
+                <!-- Набір зображень для мобільних екранів -->
+                <source media="(max-width: 767px)" srcset="
+                      ./images/team-img/team-3_sm.jpg 1x,
+                      ./images/team-img/team-3_sm@2x.jpg 2x
+                    " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/team-img/team-3_sm.jpg" alt="" width="450" height="460" loading="lazy" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__member-name">Николай Тарасов</h3>
                 <p class="team__team-position">Marketing</p>
@@ -457,12 +505,25 @@
               </ul>
             </li>
             <li class="team__lnk">
-              <img class="team__image"
-                src="./images/photo4.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <!-- Набір зображень для десктопних екранів -->
+                <source media="(min-width: 1200px)" srcset="
+                      ./images/team-img/team-4_lg.jpg 1x,
+                      ./images/team-img/team-4_lg@2x.jpg 2x
+                    " type="image/jpg" />
+                <!-- Набір зображень для планшетних екранів -->
+                <source media="(min-width: 768px)" srcset="
+                      ./images/team-img/team-4_md.jpg 1x,
+                      ./images/team-img/team-4_md@2x.jpg 2x
+                    " type="image/jpg" />
+                <!-- Набір зображень для мобільних екранів -->
+                <source media="(max-width: 767px)" srcset="
+                      ./images/team-img/team-4_sm.jpg 1x,
+                      ./images/team-img/team-4_sm@2x.jpg 2x
+                    " type="image/jpg" />
+                <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                <img class="team-img" src="./images/team-img/team-4_sm.jpg" alt="" width="450" height="460" loading="lazy" />
+              </picture>
               <div class="team__description">
                 <h3 class="team__member-name">Михаил Ермаков</h3>
                 <p class="team__team-position">UI Designer</p>

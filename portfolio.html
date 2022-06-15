@@ -124,8 +124,25 @@
               <article class="project">
                 <a class="project__link link" href="">
                   <div class="project__overlay">
-                    <img class="project__img" src="./images/portfolio-img/project1.jpg" alt="Технокряк" width="370"
-                      height="294" />
+                    <picture>
+                      <!-- Набір зображень для десктопних екранів -->
+                      <source media="(min-width: 1200px)" srcset="
+                                ./images/portfolio-img/portfolio-1_lg.jpg 1x,
+                                ./images/portfolio-img/portfolio-1_lg@2x.jpg 2x
+                              " type="image/jpg" />
+                      <!-- Набір зображень для планшетних екранів -->
+                      <source media="(min-width: 768px)" srcset="
+                                ./images/portfolio-img/portfolio-1_md.jpg 1x,
+                                ./images/portfolio-img/portfolio-1_md@2x.jpg 2x
+                              " type="image/jpg" />
+                      <!-- Набір зображень для мобільних екранів -->
+                      <source media="(max-width: 767px)" srcset="
+                                ./images/portfolio-img/portfolio-1_sm 1x,
+                                ./images/portfolio-img/portfolio-1_sm@2x.jpg 2x
+                              " type="image/jpg" />
+                      <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                      <img class="team-img" src="./images/portfolio-img/portfolio-1_lg.jpg" alt="" width="450" height="294" loading="lazy" />
+                    </picture>
                     <p class="project__description">
                       Ресурс предлагает комплексные предложения с разным
                       уровнем функционала и сервисов.
@@ -143,8 +160,26 @@
             <li class="card-set__item">
               <a class="project__link link" href="">
                 <div class="project__overlay">
-                  <img class="project__img" src="./images/portfolio-img/project2.jpg" alt="Постер New Orlean vs Golden Star"
-                    width="370" height="294" />
+                  <picture>
+                    <!-- Набір зображень для десктопних екранів -->
+                    <source media="(min-width: 1200px)" srcset="
+                          ./images/portfolio-img/portfolio-2_lg.jpg 1x,
+                          ./images/portfolio-img/portfolio-2_lg@2x.jpg 2x
+                        " type="image/jpg" />
+                    <!-- Набір зображень для планшетних екранів -->
+                    <source media="(min-width: 768px)" srcset="
+                          ./images/portfolio-img/portfolio-2_md.jpg 1x,
+                          ./images/portfolio-img/portfolio-2_md@2x.jpg 2x
+                        " type="image/jpg" />
+                    <!-- Набір зображень для мобільних екранів -->
+                    <source media="(max-width: 767px)" srcset="
+                          ./images/portfolio-img/portfolio-2_sm 1x,
+                          ./images/portfolio-img/portfolio-2_sm@2x.jpg 2x
+                        " type="image/jpg" />
+                    <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                    <img class="team-img" src="./images/portfolio-img/portfolio-2_lg.jpg" alt="" width="450" height="294"
+                      loading="lazy" />
+                  </picture>
                   <p class="project__description">
                     Ресурс предлагает комплексные предложения с разным
                     уровнем функционала и сервисов.
@@ -161,8 +196,26 @@
             <li class="card-set__item">
               <a class="project__link link" href="">
                 <div class="project__overlay">
-                  <img class="project__img" src="./images/portfolio-img/project3.jpg" alt="Ресторан Seafood" width="370"
-                    height="294" />
+                  <picture>
+                    <!-- Набір зображень для десктопних екранів -->
+                    <source media="(min-width: 1200px)" srcset="
+                          ./images/portfolio-img/portfolio-3_lg.jpg 1x,
+                          ./images/portfolio-img/portfolio-3_lg@2x.jpg 2x
+                        " type="image/jpg" />
+                    <!-- Набір зображень для планшетних екранів -->
+                    <source media="(min-width: 768px)" srcset="
+                          ./images/portfolio-img/portfolio-3_md.jpg 1x,
+                          ./images/portfolio-img/portfolio-3_md@2x.jpg 2x
+                        " type="image/jpg" />
+                    <!-- Набір зображень для мобільних екранів -->
+                    <source media="(max-width: 767px)" srcset="
+                          ./images/portfolio-img/portfolio-3_sm 1x,
+                          ./images/portfolio-img/portfolio-3_sm@2x.jpg 2x
+                        " type="image/jpg" />
+                    <!-- Дефолтне зображення, яке відпрацює у будь-якому випадку -->
+                    <img class="team-img" src="./images/portfolio-img/portfolio-3_lg.jpg" alt="" width="450" height="294"
+                      loading="lazy" />
+                  </picture>
                   <p class="project__description">
                     Ресурс предлагает комплексные предложения с разным
                     уровнем функционала и сервисов.
