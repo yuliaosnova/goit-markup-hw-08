@@ -511,10 +511,20 @@ img {
 }
 
 .modal-form__policy-desc {
-  font-size: 14px;
-  line-height: 1.71;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: setLineHeight(14, 12px);
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form__policy-desc {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: setLineHeight(24, 14px);
+    letter-spacing: 0.03em;
+  }
 }
 
 .modal-form__button {

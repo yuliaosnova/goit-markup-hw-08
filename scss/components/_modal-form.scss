@@ -229,10 +229,12 @@
 }
 
 .modal-form__policy-desc {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+    @include fonts (400, 12px, 14, 0.03em);
     color: #757575;
+
+    @include mq(desktop) {
+        @include fonts (400, 14px, 24, 0.03em);
+    }
 }
 
 .modal-form__button {
