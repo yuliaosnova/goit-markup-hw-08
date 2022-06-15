@@ -58,16 +58,15 @@
     }
 
    
-    @include mq(mobile) {
+    @include mq(mobile-only) {
         max-width: 480px;
     
         padding-top: 118px;
         padding-bottom: 128px;
         }
 
-    @include mq(tablet) {
+    @include mq(tablet-only) {
         max-width: 768px;
-
         }
 
     @include mq(desktop) {

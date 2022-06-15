@@ -56,7 +56,9 @@
     border-radius: 4px;
     // background-color: #F5F4FA;
     padding: 6px 22px;
+
     transition: var(--animation);
+
     &:hover,
     &:focus {
         color: #ffffff;
@@ -111,7 +113,12 @@
         }
     }
 
-    transition: var(--animation);
+        transition: var(--animation-mobile);
+    
+        @include mq (desktop) {
+            transition: var(--animation);
+        }
+
     /* overflow: hidden; */
     
     // &:nth-last-child(-n + 3) {
@@ -192,7 +199,11 @@
     position: absolute;
     opacity: 0;
     transform: translateY(100%);
-    transition: var(--animation);
+    transition: var(--animation-mobile);
+    
+    @include mq (desktop) {
+        transition: var(--animation);
+    }
 
     @include mq (mobile) {
         padding: 77px 24px;

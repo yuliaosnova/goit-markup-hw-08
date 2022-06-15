@@ -155,17 +155,10 @@
 }
 
 .sign-up__group {
-
-    @include mq (mobile) {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-    
-    @include mq (tablet) {
-        
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
     
     @include mq (desktop) {
         margin-right: 12px;
