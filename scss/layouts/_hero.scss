@@ -1,33 +1,81 @@
 .hero {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     background-color: var(--hero-bg);
+
+    //  Завантаження звичайного фонового зображення для мобільної версії
+    @include mq(mobile-only) {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+         url(../images/hero-img/hero_sm.jpg);
+
+    // Завантаження ретінізованого 2х фонового зображення для мобільної версії
+        @include mq(retina) {
+            background-image: 
+                linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+            url(../images/hero-img/hero_sm@2x.png);
+        }
+    }
+    
+    // Завантаження звичайного фонового зображення для планшету
+    @include mq(tablet-only) {
+        background-image:
+            linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+         url(../images/hero-img/hero_md.jpg);
+        
+    // Завантаження ретінізованого 2х фонового зображення для планшету
+    @include mq(retina) {
+        background-image: linear-gradient(to right,
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img/hero_md@2x.jpg);}
+    }
+
+    // Завантаження звичайного фонового зображення для десктопної версії
+    @include mq(desktop) {
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url(../images/bg-img.png);
-    background-size: cover;
+        url(../images/hero-img/hero_lg.jpg);
+        
+    // Завантаження ретінізованого 2х фонового зображення
+    @include mq(retina) {
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url(../images/hero-img/hero_lg@2x.jpg);      
+        }
+    }
 
+   
     @include mq(mobile) {
         max-width: 480px;
-        // height: 400px;
+    
         padding-top: 118px;
         padding-bottom: 128px;
         }
 
     @include mq(tablet) {
         max-width: 768px;
-        // height: 400px;
+
         }
 
     @include mq(desktop) {
         max-width: 1600px;
-        // height: 600px;
+
         padding-top: 200px;
         padding-bottom: 200px;
         }
-
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .hero__title {
