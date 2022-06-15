@@ -88,7 +88,7 @@
 }
 
 .card-set__item {
-    @include mq (mobile) {
+    @include mq (mobile-only) {
         width: 100%;
         margin-bottom: 30px;
     }
@@ -200,7 +200,6 @@
     opacity: 0;
     transform: translateY(100%);
     transition: var(--animation-mobile);
-    
     @include mq (desktop) {
         transition: var(--animation);
     }
