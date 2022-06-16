@@ -21,52 +21,39 @@
     }
 }
 
-.navigation__button {
-
+.menu-toggle {
     display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
     background-color: transparent;
+    margin-left: auto;
+    cursor: pointer;
 
+    @include mq (tablet) {
+        display: none;
+    }
+
+    &:hover,
+    &:focus {
+        fill: var(--accent-cl);
+    }
+}
+
+.menu-toggle.js-close-menu {
     position: absolute;
     top: 10px;
     right: 15px;  
-    z-index: 20;
-    cursor: pointer;
-
-
-    // @media screen and (min-width: 768px) {
-    //     display: none;
-    // }
-
-    @include mq (tablet) {
-            display: none;
-        }
-
-    &.is-open .button__icon--cross {
-        display: block;
-    }
-    
-    &.is-open .button__icon--menu {
-        display: none;
-    }
-}
-
-.button__icon--cross {
-    display: none;
 }
 
 .desktop-menu {
-    @include mq (mobile-only) {
-        display: none;
-        }
 
-    @include mq (tablet) {
-        // display: block;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (max-width: 767px) {
+        display: none;
         }
 }
 
@@ -115,20 +102,6 @@
     &:not(:last-child) {
             margin-right: 50px;
         }
-    
-    
-
-    // @include mq (tablet-only) {
-    // &:last-child {
-    //         margin-right: 84px;
-    //     }
-    // }
-
-    // @include mq (desktop){
-    //     &:last-child {
-    //             margin-right: 305px;
-    //         }
-    // }
 }
 
 .contacts-container {
@@ -139,7 +112,7 @@
     align-items: flex-start;
     @include mq (tablet) {
     flex-direction: column;
-        }
+    }
 
     @include mq (tablet) {
         flex-direction: column;
