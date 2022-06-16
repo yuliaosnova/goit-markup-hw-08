@@ -42,6 +42,7 @@ body {
 .section-title {
   color: var(--secondary-txt-cl);
   text-align: center;
+  margin-bottom: 30px;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -50,7 +51,6 @@ body {
     font-size: 28px;
     line-height: setLineHeight(33, 28px);
     letter-spacing: 0.03em;
-    margin-bottom: 30px;
   }
 }
 
@@ -723,7 +723,7 @@ img {
   cursor: pointer;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+@media screen and (min-width: 768px) {
   .navigation__button {
     display: none;
   }
@@ -988,6 +988,8 @@ img {
   .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-img/hero_md.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-img/hero_md.jpg);
+    height: 400px;
+    padding-top: 118px;
   }
 }
 
