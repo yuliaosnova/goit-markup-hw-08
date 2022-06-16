@@ -120,6 +120,7 @@
 .modal-form {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
@@ -218,6 +219,12 @@
     &:focus {
         border-color: #2196f3;
     }
+}
+
+.modal-form__policy-group {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
 }
 
 .modal-form__custom-checkbox {
