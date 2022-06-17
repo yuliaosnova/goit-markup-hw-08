@@ -34,8 +34,7 @@
     0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
-    // width: 100vw;
-    // height: 100vh;
+    width: 450px;
     
     padding: 40px;
 
@@ -43,14 +42,6 @@
     top: 50%;
     left: 50%;
     z-index: 1000;
-
-    @include mq (mobile-only) {
-       
-    }
-    
-    @include mq (tablet-only) {
-      
-    }
     
     @include mq (desktop) {
         width: 528px;
@@ -238,11 +229,11 @@
 }
 
 .modal-form__policy-desc {
-    @include fonts (400, 12px, 14, 0.03em);
+    @include fonts (400, 12px, 1.17, 0.03em);
     color: #757575;
 
     @include mq(desktop) {
-        @include fonts (400, 14px, 24, 0.03em);
+        @include fonts (400, 14px, 1.17, 0.03em);
     }
 }
 

@@ -27,7 +27,7 @@
 
 .mobile-menu__item {
     color: rgba(33, 33, 33, 1);
-    @include fonts (500, 40px, 47, 0.02em);
+    @include fonts (500, 40px, 1.17, 0.02em);
     &:not(:last-child) {
             margin-bottom: 32px;
         }
@@ -37,13 +37,13 @@
 }
  .mobile-menu__tel {
      color: rgba(33, 150, 243, 1);
-    @include fonts (500, 34px, 40, 0.02em);
+    @include fonts (500, 34px, 1.17, 0.02em);
     margin-bottom: 32px;
  }
 
  .mobile-menu__mail {
      color: rgba(117, 117, 117, 1);
-     @include fonts (500, 24px, 28, 0.02em);
+     @include fonts (500, 24px, 1.17, 0.02em);
      margin-bottom: 64px;
  }
 
@@ -64,5 +64,5 @@
     }
     &:not(:first-child) {margin-left: 10px;}
 
-    @include fonts (400, 18px, 22, 0.02em);
+    @include fonts (400, 18px, 1.22, 0.02em);
 }

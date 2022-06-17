@@ -86,11 +86,11 @@
     margin-bottom: 30px;
 
     @include mq(mobile) {
-            @include fonts (900, 26px, 42, 0.06em, uppercase);
+            @include fonts (900, 26px, 1.62, 0.06em, uppercase);
         }
    
     @include mq(desktop) {
-             @include fonts (900, 44px, 60, 0.06em, uppercase);
+             @include fonts (900, 44px, 1.36, 0.06em, uppercase);
          }
 }
 

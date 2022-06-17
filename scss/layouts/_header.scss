@@ -83,7 +83,7 @@
 .navigation__link {
     display: inline-block;
 
-    @include fonts (500, 14px, 16, 0.02em);
+    @include fonts (500, 14px, 1.17, 0.02em);
 
     color: var(--secondary-txt-cl);
 
@@ -110,6 +110,7 @@
     
     justify-content: center;
     align-items: flex-start;
+
     @include mq (tablet) {
     flex-direction: column;
     }
@@ -135,11 +136,11 @@
     color: var(--main-txt-cl);
 
     @include mq(tablet) {
-    @include fonts (500, 12px, 14, 0.02em);
+    @include fonts (500, 12px, 1.17, 0.02em);
         }
 
     @include mq(desktop) {
-    @include fonts (500, 14px, 16, 0.02em);
+    @include fonts (500, 14px, 1.17, 0.02em);
           }
 }
 

@@ -10,14 +10,10 @@ body {
     color: var(--secondary-txt-cl);
     text-align: center;
     margin-bottom: 30px;
-    
-    @include mq(mobile-only) {
-            @include fonts (700, 28px, 33, 0.03em);
-            
-        }
+    font-size: 28px;
 
     @include mq(desktop) {
-        @include fonts (700, 36px, 42, 0.03em);
+        @include fonts (700, 36px, 1.17, 0.03em);
         margin-bottom: 50px;
     }
 }

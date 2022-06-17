@@ -4,12 +4,12 @@
     text-decoration: none;
     display: inline-block;
 
-    @include fonts (700, 24px, 28, 0.03em);
+    @include fonts (700, 24px, 1.38, 0.03em);
         padding-top: 16px;
         padding-bottom: 16px;
 
     @include mq(desktop) {
-        @include fonts (700, 26px, 31, 0.03em);
+        @include fonts (700, 26px, 1.38, 0.03em);
 }
     
 }
